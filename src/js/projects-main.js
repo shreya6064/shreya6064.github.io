@@ -64,7 +64,7 @@ import { setupFreeOrbitCamera  } from './camera.js';
     // Load GLB
     const loader = new GLTFLoader();
     loader.load(
-      './assets/projects.glb',
+      '/assets/projects.glb',
       (gltf) => {
         scene.add(gltf.scene);
       },
