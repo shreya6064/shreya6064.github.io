@@ -47,7 +47,7 @@ import { setupFreeOrbitCamera  } from './camera.js';
     // Lighting
 
     new RGBELoader()
-  .setPath('/hdris/')
+  .setPath('/assets/hdris/')
   .load('room.hdr', (texture) => {
     texture.mapping = THREE.EquirectangularReflectionMapping;
     scene.environment = texture;
@@ -64,7 +64,7 @@ import { setupFreeOrbitCamera  } from './camera.js';
     // Load GLB
     const loader = new GLTFLoader();
     loader.load(
-      '/projects.glb',
+      '/assets/projects.glb',
       (gltf) => {
         scene.add(gltf.scene);
       },
