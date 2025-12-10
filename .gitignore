@@ -1,0 +1,10 @@
+node_modules/
+dist/
+docs/
+.DS_Store
+.vscode/
+
+blender/
+blender/notes_pvt/
+bts/
+
