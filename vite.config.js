@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         projects: resolve(__dirname, 'projects.html'),
+        shaders: resolve(__dirname, 'shaders.html'),
       },
     },
   },
