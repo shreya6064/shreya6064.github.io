@@ -36,7 +36,7 @@ import { setupClickableLinks } from './clickLink.js';
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.0;
     document.body.appendChild(renderer.domElement);
-
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 
     const camera = setupFreeOrbitCamera(renderer, { minY: -11.2 });
