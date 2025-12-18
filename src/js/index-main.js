@@ -29,15 +29,21 @@ import { setupClickableLinks } from './clickLink.js';
     
 
 
-
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
+    
+    const isMobile = window.innerWidth < 768;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
+
+
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.0;
     document.body.appendChild(renderer.domElement);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    
+    //renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 
 

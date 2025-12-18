@@ -22,9 +22,9 @@ export function setupFreeOrbitCamera(renderer, {
   responsive = {
     breakpoint: 768,
     fovDesktop: 20,
-    fovMobile: 55,
+    fovMobile: 25,
     distanceDesktop: distance,
-    distanceMobile: 11,
+    distanceMobile: 9,
     // optional: slightly wider yaw on mobile if you want
     // minYawMobile: minYaw, maxYawMobile: maxYaw,
   },
