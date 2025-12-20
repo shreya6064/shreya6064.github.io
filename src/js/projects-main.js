@@ -5,8 +5,10 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
 //import { setUpScrollCam } from './js/camera.js';
 import { setupFreeOrbitCamera  } from './camera.js';
-import { createHeader } from '../components/header.js';
+
 import { setupClickableLinks } from './clickLink.js';
+
+import { setupVideoScreens } from "./videoScreens.js";
 
 // Scene
     const scene = new THREE.Scene();
@@ -65,6 +67,7 @@ import { setupClickableLinks } from './clickLink.js';
 
     // Load GLB
     let clickLinks = null;
+    let videoScreens = null;
 
     const loader = new GLTFLoader();
     loader.load(
@@ -81,9 +84,29 @@ import { setupClickableLinks } from './clickLink.js';
             ShadersButton: './shaders.html',
             ArtButton: './art.html',
             AboutButton: './about.html',
-            ContactButton: './contact.html'
+            ContactButton: './contact.html',
+            door : 'https://shreya6064.github.io/virtual-campus-demo/',
+            
           },
         });
+
+
+        videoScreens = setupVideoScreens({
+          camera,
+          domElement: renderer.domElement,
+          sceneRoot: gltf.scene,
+          screensByName: {
+            prativerse_TV: "./videos/3d_virtual_campus_demo.mp4",
+            //VID_TV_02: "./videos/reel.mp4",
+          },
+          optionsByName: {
+            prativerse_TV: { loop: true, muted: true },
+           // VID_TV_02: { loop: true, muted: true }, // muted = easier on mobile
+          },
+        });
+
+
+
       },
       (xhr) => console.log(`Loading: ${(xhr.loaded / xhr.total * 100).toFixed(0)}%`),
       (error) => console.error(error)

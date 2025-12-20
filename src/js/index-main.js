@@ -48,7 +48,7 @@ import { setupClickableLinks } from './clickLink.js';
 
 
 
-    const camera = setupFreeOrbitCamera(renderer, { minY: 1.6 });
+    const camera = setupFreeOrbitCamera(renderer, { minY: 1.2 });
 
     // const camera = new THREE.PerspectiveCamera(20, window.innerWidth/window.innerHeight, 0.1, 100);
     // camera.position.set(5, 5, 5);
@@ -90,7 +90,10 @@ import { setupClickableLinks } from './clickLink.js';
             ShadersButton: './shaders.html',
             ArtButton: './art.html',
             AboutButton: './about.html',
-            ContactButton: './contact.html'
+            ContactButton: './contact.html',
+            contact : './contact.html',
+            in : 'https://www.linkedin.com/in/shreyapunjabi/',
+            gh : 'https://github.com/shreya6064/',
           },
         });
       },
