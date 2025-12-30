@@ -42,7 +42,7 @@ import { setupVideoScreens } from "./videoScreens.js";
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 
-    const camera = setupFreeOrbitCamera(renderer, {minY: -4  });
+    const camera = setupFreeOrbitCamera(renderer, {minY: -5.5  });
 
     // const camera = new THREE.PerspectiveCamera(20, window.innerWidth/window.innerHeight, 0.1, 100);
     // camera.position.set(5, 5, 5);
@@ -86,7 +86,16 @@ import { setupVideoScreens } from "./videoScreens.js";
             AboutButton: './about.html',
             ContactButton: './contact.html',
             door : 'https://shreya6064.github.io/virtual-campus-demo/',
-            
+
+            bg_removal: 'https://github.com/shreya6064/remove-background',
+            b42d: 'https://github.com/shreya6064/b42d',
+            makespace: 'https://github.com/shreya6064/make-space',
+            globalbevel: 'https://github.com/shreya6064/global-bevel',
+            textnodes: '',
+            originsetter: 'https://github.com/shreya6064/origin-setter',
+
+            devpost_swiftstep: 'https://devpost.com/software/swift-step',
+            devpost_halostream: 'https://devpost.com/software/holostream',
           },
         });
 
@@ -97,11 +106,17 @@ import { setupVideoScreens } from "./videoScreens.js";
           sceneRoot: gltf.scene,
           screensByName: {
             prativerse_TV: "./videos/3d_virtual_campus_demo.mp4",
+            traffic_sim: "./videos/traffic_sim.mp4",
+            ufos: "./videos/ufos.mp4",
+            poster_maker: "./videos/poster_maker.mp4",
             //VID_TV_02: "./videos/reel.mp4",
           },
           optionsByName: {
             prativerse_TV: { loop: true, muted: true },
-           // VID_TV_02: { loop: true, muted: true }, // muted = easier on mobile
+            traffic_sim: { loop: true, muted: true },
+            ufos: { loop: true, muted: true },
+            poster_maker: { loop: true, muted: true },
+            // VID_TV_02: { loop: true, muted: true }, // muted = easier on mobile
           },
         });
 

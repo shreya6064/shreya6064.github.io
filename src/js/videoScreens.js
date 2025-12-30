@@ -53,8 +53,32 @@ export function setupVideoScreens({
   }
 
   function attachVideoToMesh(mesh, url, opts) {
+    let playIcon = null;
+
+    // Option 1: explicit name in options
+    if (opts.playIconName) {
+    playIcon = sceneRoot.getObjectByName(opts.playIconName);
+    }
+
+    // Option 2: convention: "<videoMeshName>_PLAY"
+    if (!playIcon) {
+    playIcon = sceneRoot.getObjectByName(`${mesh.name}_PLAY`);
+    }
+
+
+
+    
+    if (playIcon) playIcon.visible = true;
+
+
+
     const video = makeVideo(url, opts);
     const texture = new THREE.VideoTexture(video);
+    texture.flipY = false;
+
+    texture.wrapS = THREE.RepeatWrapping;
+    // texture.repeat.x = -1;
+    // texture.offset.x = 1;
     texture.colorSpace = THREE.SRGBColorSpace; // if your renderer uses SRGBColorSpace
     texture.minFilter = THREE.LinearFilter;
     texture.magFilter = THREE.LinearFilter;
@@ -69,7 +93,8 @@ export function setupVideoScreens({
 
     mesh.material = material;
 
-    screens.push({ mesh, video, texture });
+    //screens.push({ mesh, video, texture });
+    screens.push({ mesh, video, texture, playIcon });
   }
 
   // Build screens from names
@@ -113,11 +138,28 @@ export function setupVideoScreens({
     // If you want “only one plays at a time”, pause others:
     // screens.forEach(s => { if (s.video !== v) s.video.pause(); });
 
+    // if (v.paused) {
+    //   v.play().catch(err => console.warn("[videoScreens] play() blocked:", err));
+    // } else {
+    //   v.pause();
+    // }
     if (v.paused) {
-      v.play().catch(err => console.warn("[videoScreens] play() blocked:", err));
+    v.play().catch(err => console.warn("[videoScreens] play() blocked:", err));
+    if (screen.playIcon) screen.playIcon.visible = false;
     } else {
-      v.pause();
+    v.pause();
+    if (screen.playIcon) screen.playIcon.visible = true;
     }
+
+
+    screens.forEach(s => {
+    if (s !== screen) {
+        s.video.pause();
+        if (s.playIcon) s.playIcon.visible = true;
+    }
+    });
+
+
   }
 
   domElement.addEventListener("click", onClick);

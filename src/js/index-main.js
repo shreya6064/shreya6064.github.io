@@ -48,7 +48,7 @@ import { setupClickableLinks } from './clickLink.js';
 
 
 
-    const camera = setupFreeOrbitCamera(renderer, { minY: 1.2 });
+    const camera = setupFreeOrbitCamera(renderer, { minY: 0.6 });
 
     // const camera = new THREE.PerspectiveCamera(20, window.innerWidth/window.innerHeight, 0.1, 100);
     // camera.position.set(5, 5, 5);
