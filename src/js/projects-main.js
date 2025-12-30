@@ -10,6 +10,22 @@ import { setupClickableLinks } from './clickLink.js';
 
 import { setupVideoScreens } from "./videoScreens.js";
 
+import { createLoadingOverlay } from "./loadingOverlay.js";
+import { createLoadingController } from "./loadingManager.js";
+
+
+
+const overlayUI = createLoadingOverlay();
+
+let readyToRender = false;
+
+const loading = createLoadingController({
+  overlayUI,
+  onReady: () => { readyToRender = true; },
+});
+
+
+
 // Scene
     const scene = new THREE.Scene();
 
@@ -50,7 +66,7 @@ import { setupVideoScreens } from "./videoScreens.js";
     // setUpScrollCam(renderer, camera);
     // Lighting
 
-    new RGBELoader()
+    new RGBELoader(loading.manager)
   .setPath('/assets/hdris/')
   .load('room.hdr', (texture) => {
     texture.mapping = THREE.EquirectangularReflectionMapping;
@@ -69,7 +85,7 @@ import { setupVideoScreens } from "./videoScreens.js";
     let clickLinks = null;
     let videoScreens = null;
 
-    const loader = new GLTFLoader();
+    const loader = new GLTFLoader(loading.manager);
     loader.load(
       '/assets/projects.glb',
       (gltf) => {
@@ -119,7 +135,7 @@ import { setupVideoScreens } from "./videoScreens.js";
             // VID_TV_02: { loop: true, muted: true }, // muted = easier on mobile
           },
         });
-
+        loading.markGlbDone();
 
 
       },

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects</title>
+  <link rel="stylesheet" href="/styles/style.css">
   <link rel="icon" type="image/png" href="/logo.png" />
   <style>
     body, html {
@@ -18,6 +19,23 @@
   </style>
 </head>
 <body>
+  <div id="loadingOverlay">
+  <div class="loadingCard">
+    <img
+      src="/logo.png"
+      alt="Logo"
+      class="loadingLogo"
+    />
+
+    <div class="loadingBar">
+      <div id="loadingBarFill"></div>
+    </div>
+
+    <div id="loadingLabel">Loading 3D scene…</div>
+    <div id="loadingPct">0%</div>
+  </div>
+</div>
+
   <script type="module" src="/src/js/projects-main.js"></script>
 </body>
 </body>

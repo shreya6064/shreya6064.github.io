@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects</title>
+  <link rel="stylesheet" href="/styles/style.css">
   <link rel="icon" type="image/png" href="/logo.png" />
   <style>
     body, html {
@@ -16,10 +17,27 @@
     }
     canvas { display: block; }
   </style>
-  <script type="module" crossorigin src="/assets/projects-BNcdW4nR.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/clickLink-Ds_vkaND.js">
+  <script type="module" crossorigin src="/assets/projects-Bz6y41FW.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/loadingManager-BFkCW6DZ.js">
 </head>
-<body>
+<body>
+  <div id="loadingOverlay">
+  <div class="loadingCard">
+    <img
+      src="/logo.png"
+      alt="Logo"
+      class="loadingLogo"
+    />
+
+    <div class="loadingBar">
+      <div id="loadingBarFill"></div>
+    </div>
+
+    <div id="loadingLabel">Loading 3D scene…</div>
+    <div id="loadingPct">0%</div>
+  </div>
+</div>
+
 </body>
 </body>
 </html>

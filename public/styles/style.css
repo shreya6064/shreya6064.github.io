@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/fonts/JosefinSans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+#loadingOverlay {
+  position: fixed;
+  inset: 0;
+  background: #0f0f12;
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease;
+}
+
+#loadingOverlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loadingCard {
+  width: min(420px, 85vw);
+  padding: 18px 18px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.loadingTitle {
+  font-size: 16px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.loadingBar {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.10);
+}
+
+#loadingBarFill {
+  height: 100%;
+  width: 0%;
+  background: rgba(255,255,255,0.85);
+  transition: width 0.15s linear;
+}
+
+#loadingPct {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.loadingLogo {
+  width: 96px;          /* adjust to taste */
+  height: auto;
+  margin: 0 auto 16px;  /* center + spacing */
+  display: block;
+  opacity: 0.95;
+}

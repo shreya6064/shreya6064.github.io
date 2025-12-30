@@ -6,26 +6,25 @@ import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
 //import { setUpScrollCam } from './js/camera.js';
 import { setupFreeOrbitCamera  } from './camera.js';
 import { setupClickableLinks } from './clickLink.js';
+import { createLoadingOverlay } from "./loadingOverlay.js";
+import { createLoadingController } from "./loadingManager.js";
+
+
+
+const overlayUI = createLoadingOverlay();
+
+let readyToRender = false;
+
+const loading = createLoadingController({
+  overlayUI,
+  onReady: () => { readyToRender = true; },
+});
+
+
 
 // Scene
     const scene = new THREE.Scene();
 
-    
-
-    // Camera
-    // const camera = new THREE.PerspectiveCamera(
-    //   50, window.innerWidth / window.innerHeight, 0.1, 100
-    // );
-    // camera.position.set(3, 0, 3);
-    // camera.lookAt(0, 0, 0);
-
-    // const camera = setUpScrollCam({
-    //     startPos: new THREE.Vector3(6, 6, 6),
-    //     lookAt: new THREE.Vector3(0, 4, 0),
-    //     minY: -8,
-    //     maxY: 8
-    //     });
-    
 
 
 
@@ -41,13 +40,9 @@ import { setupClickableLinks } from './clickLink.js';
 
     const camera = setupFreeOrbitCamera(renderer, { minY: -11.2 });
 
-    // const camera = new THREE.PerspectiveCamera(20, window.innerWidth/window.innerHeight, 0.1, 100);
-    // camera.position.set(5, 5, 5);
-    // camera.lookAt(0,3,0);
-    // setUpScrollCam(renderer, camera);
-    // Lighting
 
-    new RGBELoader()
+
+    new RGBELoader(loading.manager)
   .setPath('/assets/hdris/')
   .load('room.hdr', (texture) => {
     texture.mapping = THREE.EquirectangularReflectionMapping;
@@ -56,16 +51,12 @@ import { setupClickableLinks } from './clickLink.js';
   });
 
 
-    // const ambient = new THREE.AmbientLight(0xffffff, 0.6);
-    // scene.add(ambient);
-    // const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
-    // dirLight.position.set(5, 10, 7.5);
-    // scene.add(dirLight);
+
   let clickLinks = null;
     // Load GLB
-    const loader = new GLTFLoader();
+    const loader = new GLTFLoader(loading.manager);
     loader.load(
-      '/assets/art_anim.glb',
+      '/assets/art.glb',
       (gltf) => {
         scene.add(gltf.scene);
         clickLinks = setupClickableLinks({
@@ -81,14 +72,12 @@ import { setupClickableLinks } from './clickLink.js';
                             ContactButton: './contact.html'
                           },
                         });
+        loading.markGlbDone();
       },
       (xhr) => console.log(`Loading: ${(xhr.loaded / xhr.total * 100).toFixed(0)}%`),
       (error) => console.error(error)
     );
 
-    // Controls (temporary)
-    //const controls = new OrbitControls(camera, renderer.domElement);
-    //controls.enableDamping = true;
 
 
     // Resize

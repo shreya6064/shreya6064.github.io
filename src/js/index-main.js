@@ -7,6 +7,24 @@ import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
 import { setupFreeOrbitCamera  } from './camera.js';
 import { setupClickableLinks } from './clickLink.js';
 
+import { createLoadingOverlay } from "./loadingOverlay.js";
+import { createLoadingController } from "./loadingManager.js";
+
+
+
+const overlayUI = createLoadingOverlay();
+
+let readyToRender = false;
+
+const loading = createLoadingController({
+  overlayUI,
+  onReady: () => { readyToRender = true; },
+});
+
+
+
+
+
 
 // Scene
     const scene = new THREE.Scene();
@@ -56,7 +74,7 @@ import { setupClickableLinks } from './clickLink.js';
     // setUpScrollCam(renderer, camera);
     // Lighting
 
-    new RGBELoader()
+    new RGBELoader(loading.manager)
   .setPath('/assets/hdris/')
   .load('room.hdr', (texture) => {
     texture.mapping = THREE.EquirectangularReflectionMapping;
@@ -75,7 +93,7 @@ import { setupClickableLinks } from './clickLink.js';
     let clickLinks = null;
 
     // Load GLB
-    const loader = new GLTFLoader();
+    const loader = new GLTFLoader(loading.manager);
     loader.load(
       '/assets/home.glb',
       (gltf) => {
@@ -95,7 +113,9 @@ import { setupClickableLinks } from './clickLink.js';
             in : 'https://www.linkedin.com/in/shreyapunjabi/',
             gh : 'https://github.com/shreya6064/',
           },
+          
         });
+        loading.markGlbDone();
       },
       (xhr) => console.log(`Loading: ${(xhr.loaded / xhr.total * 100).toFixed(0)}%`),
       (error) => console.error(error)
