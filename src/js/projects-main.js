@@ -58,7 +58,7 @@ const loading = createLoadingController({
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 
-    const camera = setupFreeOrbitCamera(renderer, {minY: -5.5  });
+    const camera = setupFreeOrbitCamera(renderer, {minY: -6.5  });
 
     // const camera = new THREE.PerspectiveCamera(20, window.innerWidth/window.innerHeight, 0.1, 100);
     // camera.position.set(5, 5, 5);
