@@ -1,0 +1,462 @@
+{
+  "categories": [
+    
+    {
+      "id": "interactive-experiences",
+      "name": "Interactive Experiences",
+      "description": "Interactive worlds and experiences for the web and beyond."
+    },
+    {
+      "id": "3d-interiors",
+      "name": "3D Interiors",
+      "description": "Interior scenes, lighting, and visual storytelling."
+    }
+    
+  ],
+
+
+  "projects": [
+    
+
+
+
+    {
+      "id": "contemporary-house",
+      "name": "Contemporary House: Real-Time Architectural Walkthrough",
+      "category": "interactive-experiences",
+      
+      "shortDescription": "An explorable contemporary home built for the browser in Three.js, with first-person navigation and an extensively optimised 3D environment.",
+      "heroImage": "media/contemporary-house/hero2.png",
+      
+      "tools": ["Three.js", "Blender", "Real-Time 3D"],
+
+      "process": [
+      {
+        "type": "text",
+        "text": "I developed an interactive architectural walkthrough in Three.js, turning a contemporary house into an environment visitors can explore freely from a first-person perspective."
+      },
+      {
+        "type": "video",
+        "src": "media/contemporary-house/turntable.mp4",
+        
+        "caption": "A turntable of the house"
+      },
+      {
+        "type": "text",
+        "text": "A major focus was preparing and optimising the environment for real-time use in the browser. I brought triangle counts down from 15M to 3.86M."
+      },
+
+      {
+        "type": "video",
+        "src": "media/contemporary-house/walkthrough.mp4",
+        
+        "caption": "The Walkthrough"
+      },
+      {
+        "type": "text",
+        "text": "First-person movement lets visitors choose their own route and viewpoint, exploring the house as a connected space. The house was modelled, textured, and optimised by me directly from floor plans and elevation maps."
+      },
+      {
+        "type": "text",
+        "text": "I designed the interiors of the space to match the contemporary exterior."
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/iso2.png",
+        "alt": "Isometric"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/iso1.png",
+        "alt": "Isometric"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/iso3.png",
+        "alt": "Isometric"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/iso4.png",
+        "alt": "Isometric"
+      }    
+    ],
+
+      "gallery": [
+      {
+        "type": "image",
+        "src": "media/contemporary-house/cont-house (5).png"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/cont-house (6).png"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/cont-house (3).png"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/cont-house (2).png"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/cont-house (4).png"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/cont-house (7).png"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/cont-house (8).png"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/cont-house (1).png"
+      },
+      
+      {
+        "type": "image",
+        "src": "media/contemporary-house/elevation1.jpg",
+        "alt": "the canteen",
+        "caption": "Original elevation diagram"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/elevation2.jpg",
+        "alt": "the canteen",
+        "caption": "Original elevation diagram"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/plan_main.jpg",
+        "alt": "the canteen",
+        "caption": "Original floor plan"
+      },
+      {
+        "type": "image",
+        "src": "media/contemporary-house/plan_upper.jpg",
+        "alt": "the canteen",
+        "caption": "Original floor plan"
+      }
+
+
+    ],
+      "uses": []
+    },
+
+
+
+
+    {
+      "id": "casa-de-minas",
+      "name": "Casa de Minas: Interactive Tour",
+      "category": "interactive-experiences",
+      
+      "shortDescription": "A complete 3D recreation of Studio MK27’s Casa de Minas, featuring detailed landscaping, architectural renders, and a browser-based panoramic tour with interactive hotspots.",
+      "heroImage": "media/casa-de-minas/1.png",
+      
+      "tools": ["JavaScript", "Blender", "360° Tour"],
+
+      "process": [
+      {
+        "type": "text",
+        "text": "I recreated the house and its surrounding landscape in Blender, developing the scene from architectural modelling through materials, lighting, and final rendering. The project combines exterior and interior views, elevated orthographic renders, and an interactive panoramic tour that lets visitors explore the spaces directly in their browser."
+      },
+      {
+        "type": "image",
+        "src": "media/casa-de-minas/3.png",
+        "alt": "Isometric"
+      },   
+      
+      {
+        "type": "text",
+        "text": "I created the house, interiors, pool, terraces, and surrounding landscape, bringing the architecture and its setting together in one complete scene. Particular attention went to the relationship between the building’s stacked volumes, open terraces, and densely planted hillside."
+      },
+
+      {
+        "type": "image",
+        "src": "media/casa-de-minas/5.png",
+        "alt": "Isometric"
+      },
+
+      {
+        "type": "text",
+        "text": "I integrated pre-rendered 360° panoramas into a JavaScript web experience using a panorama viewer library. Visitors can look around each viewpoint, move between connected locations, and click information hotspots to learn about features within the scene."
+      }
+      
+       
+    ],
+
+      "gallery": [
+      {
+        "type": "image",
+        "src": "media/casa-de-minas/2.png"
+      },
+      {
+        "type": "image",
+        "src": "media/casa-de-minas/4.png"
+      },
+      {
+        "type": "image",
+        "src": "media/casa-de-minas/orth2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "media/casa-de-minas/orth1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "media/casa-de-minas/orth_interior.jpg"
+      },
+      {
+        "type": "image",
+        "src": "media/casa-de-minas/plan1.jpg",
+        "caption" : "Original plan"
+      },
+      {
+        "type": "image",
+        "src": "media/casa-de-minas/plan2.jpg",
+        "caption" : "Original plan"
+      }
+
+
+    ],
+      "uses": []
+    },
+
+
+{
+      "id": "virtual-campus",
+      "name": "3D Virtual Campus",
+      "category": "interactive-experiences",
+      
+      "shortDescription": "A browser-based recreation of my undergraduate campus, connecting explorable classrooms and interiors to live online meetings during COVID.",
+      "heroImage": "media/virtual-campus/front.png",
+      
+      "tools": ["Babylon.js", "Blender", "Substance Designer", "Real-Time 3D"],
+
+      "process": [
+      {
+        "type": "text",
+        "text": "I recreated my undergraduate campus as an interactive 3D environment where students could explore familiar spaces, enter rooms, and join the online meetings associated with them. Built during COVID, the project connected remote college activities to the physical places where they would normally happen."
+      },
+
+      {
+        "type": "image",
+        "src": "media/virtual-campus/iso.png",
+        "alt": "Isometric"
+        
+      },
+
+      {
+        "type": "text",
+        "text": "The experience was hosted on the college’s official CDN and endorsed by the director."
+      },
+
+      {
+        "type": "video",
+        "src": "media/virtual-campus/3d_virtual_campus_demo.mp4",
+        
+        "caption": "Exploring campus"
+      },
+    
+      {
+        "type": "text",
+        "text": "Built for real-time exploration: Recreating an entire campus required balancing architectural detail with the constraints of browser-based rendering. I baked and optimised assets for real-time use, carrying the environment from its authoring tools into a navigable web experience. Multiple rooms could be entered and explored, making the campus a connected environment with usable interior spaces."
+      },
+
+
+      
+      
+      {
+        "type": "text",
+        "text": "The project brought together environment production, real-time graphics, interaction development, and web deployment in an institutionally supported experience created for the college community."
+      }
+
+
+      
+    ],
+
+      "gallery": [
+      {
+        "type": "image",
+        "src": "media/virtual-campus/over.png"
+      },
+      {
+        "type": "image",
+        "src": "media/virtual-campus/wire_main.png",
+        "alt": "wireframe 1",
+        "caption": "A wireframe of the main campus."
+      },
+      {
+        "type": "image",
+        "src": "media/virtual-campus/corridor.png",
+        "alt": "the canteen",
+        "caption": "The Corridor"
+      },
+
+      {
+        "type": "image",
+        "src": "media/virtual-campus/audi.png",
+        "alt": "the canteen",
+        "caption": "The Auditorium"
+      },
+
+      {
+        "type": "image",
+        "src": "media/virtual-campus/deps.png",
+        "alt": "the canteen",
+        "caption": "The Classrooms"
+      },
+
+      {
+        "type": "image",
+        "src": "media/virtual-campus/canteen.png",
+        "alt": "the canteen",
+        "caption": "The Canteen"
+      }
+
+
+    ],
+      "uses": []
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": "yellow-bedroom",
+      "name": "Master Bedroom",
+      "category": "3d-interiors",
+      "shortDescription": "",
+      "heroImage": "media/3dinteriors/yellow-bedroom/persp4.png",
+      "overview": "",
+      "tools": ["Blender"],
+      "process": "",
+      "gallery": [
+ 
+        "media/3dinteriors/yellow-bedroom/test3.png",
+        "media/3dinteriors/yellow-bedroom/test4.png",
+        "media/3dinteriors/yellow-bedroom/persp1.png",
+        "media/3dinteriors/yellow-bedroom/persp2.png",
+        "media/3dinteriors/yellow-bedroom/persp3.png"
+        
+
+      ],
+      "uses": []
+    },
+
+    
+    {
+      "id": "living-blue",
+      "name": "Kid's Bedroom",
+      "category": "3d-interiors",
+      "shortDescription": "",
+      "heroImage": "media/3dinteriors/living-blue/persp2.png",
+      "overview": "",
+      "tools": ["Blender"],
+      "process": "",
+      "gallery": [
+ 
+        "media/3dinteriors/living-blue/persp1.png",
+        "media/3dinteriors/living-blue/close2.png",
+        "media/3dinteriors/living-blue/clay1.png"
+        
+        
+
+      ],
+      "uses": []
+    },
+
+    {
+      "id": "guitar-dining",
+      "name": "Living Room",
+      "category": "3d-interiors",
+      "shortDescription": "An example interior scene using the wood material.",
+      "heroImage": "media/3dinteriors/guitar-dining/persp2.png",
+      "overview": "",
+      "tools": ["Blender"],
+      "process": "",
+      "gallery": [
+        "media/3dinteriors/guitar-dining/persp3.png",
+        "media/3dinteriors/guitar-dining/persp1.png",
+        "media/3dinteriors/guitar-dining/test1.png",
+        "media/3dinteriors/guitar-dining/clay1.png"
+      ],
+      "uses": []
+    },
+
+    {
+      "id": "green-kitchen",
+      "name": "Kitchen",
+      "category": "3d-interiors",
+      "shortDescription": "An example interior scene using the wood material.",
+      "heroImage": "media/3dinteriors/green-kitchen/persp1.png",
+      "overview": "",
+      "tools": ["Blender"],
+      "process": "",
+      "gallery": [
+        "media/3dinteriors/green-kitchen/persp2.png",
+        "media/3dinteriors/green-kitchen/persp3.png",
+        "media/3dinteriors/green-kitchen/close1.png",
+        "media/3dinteriors/green-kitchen/clay1.png"
+      ],
+      "uses": []
+    },
+
+    {
+      "id": "coffee-shop",
+      "name": "Coffee Shop",
+      "category": "3d-interiors",
+      "shortDescription": "An example interior scene using the wood material.",
+      "heroImage": "media/3dinteriors/coffee-shop/persp1_dof.png",
+      "overview": "",
+      "tools": ["Blender"],
+      "process": "",
+      "gallery": [
+        "media/3dinteriors/coffee-shop/close_white1.png"
+      ],
+      "uses": []
+    }
+
+
+
+
+    
+
+
+
+
+
+    
+    
+  ]
+}
