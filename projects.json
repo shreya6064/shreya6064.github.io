@@ -7,9 +7,19 @@
       "description": "Interactive worlds and experiences for the web and beyond."
     },
     {
+      "id": "procedural-systems",
+      "name": "Procedural Systems",
+      "description": "Tools and systems for generating geometry and environments."
+    },
+    {
       "id": "3d-interiors",
       "name": "3D Interiors",
       "description": "Interior scenes, lighting, and visual storytelling."
+    },
+    {
+      "id": "shaders",
+      "name": "Shaders",
+      "description": "Real-time shading experiences."
     }
     
   ],
@@ -328,6 +338,115 @@
 
 
 
+    {
+      "id": "plant-growth",
+      "name": "Generative Plant Growth System",
+      "category": "procedural-systems",
+      
+      "shortDescription": "Plant growth system with artist controllable parameters to let you draw curves and animate plant growth along them",
+      "heroImage": "media/plant-growth/hero.png",
+      
+      "tools": ["Blender", "Geometry Nodes"],
+
+      "process": [
+        {
+        "type": "video",
+        "src": "media/plant-growth/plant-growth.mp4",
+        
+        "caption": "Created by animating a single parameter from 0-1."
+      },
+      {
+        "type": "video",
+        "src": "media/plant-growth/suzanne.mp4",
+        
+        "caption": "Animated curves drawn on a surface."
+      },
+
+
+      {
+        
+        "type": "image",
+        "src": "media/plant-growth/parameters.png",
+        "caption": "Controllable Parameters"
+      },
+      
+      {
+        "type": "text",
+        "text": "I made a procedural plant growth tool in Blender, with artist-controllable stem growth, leaf placement & density, leaf mesh, noise control, and stem & leaf size controls. Lets you draw to spawn vines along curves and use a 0-1 slider to grow them. The leaf size and placement changes as the vine grows. "
+      },
+
+      {
+        "type": "video",
+        "src": "media/plant-growth/tool-demo.mp4",
+        
+        "caption": "The tool in action."
+      }
+       
+    ],
+
+      
+      "uses": []
+    },
+
+
+
+
+
+
+    {
+      "id": "watercolour-shader",
+      "name": "Stylised Watercolour Shader",
+      "category": "shaders",
+      
+      "shortDescription": "A non-photorealistic watercolour shader built with Blender's shader and compositing nodes.",
+      "heroImage": "media/watercolour-shader/test5.png",
+      
+      "tools": ["Blender", "Shader Nodes", "Geometry Nodes"],
+
+      "process": [
+      
+      {
+        "type": "video",
+        "src": "media/watercolour-shader/plant_growing.mp4",
+        
+        "caption": "with growing plants"
+      },
+
+      {
+        "type": "video",
+        "src": "media/watercolour-shader/strawberry_tart.mp4",
+        
+        "caption": "strawberry tart turntable"
+      }
+      
+      
+
+      
+      
+       
+    ],
+
+      "gallery": [
+      {
+        "type": "video",
+        "src": "media/watercolour-shader/plant_growing_workbench.mp4",
+        "caption": "the video before shaders"
+      },
+
+      {
+        "type": "video",
+        "src": "media/watercolour-shader/strawberry_tart_workbench.mp4",
+        "caption": "the video before shaders"
+      }
+      
+      
+
+
+    ],
+      "uses": ["plant-growth"]
+    },
+
+
 
 
 
@@ -400,7 +519,7 @@
       "id": "guitar-dining",
       "name": "Living Room",
       "category": "3d-interiors",
-      "shortDescription": "An example interior scene using the wood material.",
+      "shortDescription": "",
       "heroImage": "media/3dinteriors/guitar-dining/persp2.png",
       "overview": "",
       "tools": ["Blender"],
@@ -418,7 +537,7 @@
       "id": "green-kitchen",
       "name": "Kitchen",
       "category": "3d-interiors",
-      "shortDescription": "An example interior scene using the wood material.",
+      "shortDescription": "",
       "heroImage": "media/3dinteriors/green-kitchen/persp1.png",
       "overview": "",
       "tools": ["Blender"],
@@ -436,7 +555,7 @@
       "id": "coffee-shop",
       "name": "Coffee Shop",
       "category": "3d-interiors",
-      "shortDescription": "An example interior scene using the wood material.",
+      "shortDescription": "",
       "heroImage": "media/3dinteriors/coffee-shop/persp1_dof.png",
       "overview": "",
       "tools": ["Blender"],
