@@ -1,26 +1,34 @@
 {
   "categories": [
     
-    {
-      "id": "interactive-experiences",
-      "name": "Interactive Experiences",
-      "description": "Interactive worlds and experiences for the web and beyond."
-    },
+    
     {
       "id": "procedural-systems",
       "name": "Procedural Systems",
       "description": "Tools and systems for generating geometry and environments."
     },
     {
-      "id": "3d-interiors",
-      "name": "3D Interiors",
-      "description": "Interior scenes, lighting, and visual storytelling."
+      "id": "interactive-experiences",
+      "name": "Interactive Experiences",
+      "description": "Interactive worlds and experiences for the web and beyond."
     },
     {
       "id": "shaders",
       "name": "Shaders",
       "description": "Real-time shading experiences."
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "description": "Making DCCs work faster."
+    },
+    {
+      "id": "3d-interiors",
+      "name": "3D Interiors",
+      "description": "Interior scenes, lighting, and visual storytelling."
     }
+    
+    
     
   ],
 
@@ -338,56 +346,7 @@
 
 
 
-    {
-      "id": "plant-growth",
-      "name": "Generative Plant Growth System",
-      "category": "procedural-systems",
-      
-      "shortDescription": "Plant growth system with artist controllable parameters to let you draw curves and animate plant growth along them",
-      "heroImage": "media/plant-growth/hero.png",
-      
-      "tools": ["Blender", "Geometry Nodes"],
-
-      "process": [
-        {
-        "type": "video",
-        "src": "media/plant-growth/plant-growth.mp4",
-        
-        "caption": "Created by animating a single parameter from 0-1."
-      },
-      {
-        "type": "video",
-        "src": "media/plant-growth/suzanne.mp4",
-        
-        "caption": "Animated curves drawn on a surface."
-      },
-
-
-      {
-        
-        "type": "image",
-        "src": "media/plant-growth/parameters.png",
-        "caption": "Controllable Parameters"
-      },
-      
-      {
-        "type": "text",
-        "text": "I made a procedural plant growth tool in Blender, with artist-controllable stem growth, leaf placement & density, leaf mesh, noise control, and stem & leaf size controls. Lets you draw to spawn vines along curves and use a 0-1 slider to grow them. The leaf size and placement changes as the vine grows. "
-      },
-
-      {
-        "type": "video",
-        "src": "media/plant-growth/tool-demo.mp4",
-        
-        "caption": "The tool in action."
-      }
-       
-    ],
-
-      
-      "uses": []
-    },
-
+    
 
 
 
@@ -447,8 +406,233 @@
     },
 
 
+    
 
 
+
+
+    {
+      "id": "buildings",
+      "name": "Procedural Building Generator",
+      "category": "procedural-systems",
+      
+      "shortDescription": "A building generation system written entirely in C# in Unity, producing varied architectural forms with stepped rooflines, repeated façade details, and connected building volumes.",
+      "heroImage": "media/pcg-buildings/building1.png",
+      
+      "tools": ["Unity", "C#", "Procedural Generation"],
+
+      "process": [
+        {
+          "type": "text",
+          "text": "I developed a procedural building generator entirely in C# in Unity, exploring how architectural rules can produce varied buildings with a consistent visual style. The generated structures combine volumes of different heights with repeated windows, entrances, and roof details. Variations in the overall form create stepped silhouettes, recessed sections, and courtyard-like spaces."
+        },
+
+        {
+          "type": "text",
+          "text": "I wrote the generation logic in C#, translating spatial relationships and architectural repetition into a system that constructs buildings programmatically within Unity."
+        }
+      
+       
+    ],
+
+      "gallery": [
+        "media/pcg-buildings/building2.png",
+        "media/pcg-buildings/building3.png",
+        "media/pcg-buildings/building4.png",
+        "media/pcg-buildings/building5.png"
+      
+
+
+    ],
+      "uses": []
+    },
+    
+    
+        {
+      "id": "traffic",
+      "name": "Traffic Simulation",
+      "category": "procedural-systems",
+      
+      "shortDescription": "A real-time traffic simulation developed entirely in Unity and C#, with vehicles navigating a connected road network through curves and intersections.",
+      "heroImage": "media/traffic/hero.png",
+      
+      "tools": ["Unity", "C#", "Procedural Generation"],
+
+      "process": [
+        {
+          "type": "text",
+          "text": "I built a real-time traffic simulation entirely in Unity and C#, exploring how individual vehicle behaviours combine to produce traffic flow across a connected road network."
+        },
+
+        {
+        "type": "video",
+        "src": "media/traffic/traffic_sim.mp4",
+        "caption": "The simulation in motion"
+      },
+
+        {
+          "type": "text",
+          "text": "I implemented the simulation logic in C#, connecting vehicle movement with the structure of the road network. The project focused on coordinating multiple vehicles within a shared environment and handling their progression through connected road sections."
+        },
+        {
+          "type": "text",
+          "text": "The road layout provides a compact test environment for observing traffic across straight sections, bends, and junctions. Watching the network as a whole makes it possible to inspect how local vehicle interactions affect the flow of traffic elsewhere in the system."
+        }
+      
+       
+    ],
+
+      
+      "uses": []
+    },
+
+
+    {
+      "id": "plant-growth",
+      "name": "Generative Plant Growth System",
+      "category": "procedural-systems",
+      
+      "shortDescription": "Plant growth system with artist controllable parameters to let you draw curves and animate plant growth along them",
+      "heroImage": "media/plant-growth/hero.png",
+      
+      "tools": ["Blender", "Geometry Nodes"],
+
+      "process": [
+        {
+        "type": "video",
+        "src": "media/plant-growth/plant-growth.mp4",
+        
+        "caption": "Created by animating a single parameter from 0-1."
+      },
+      {
+        "type": "video",
+        "src": "media/plant-growth/suzanne.mp4",
+        
+        "caption": "Animated curves drawn on a surface."
+      },
+
+
+      {
+        
+        "type": "image",
+        "src": "media/plant-growth/parameters.png",
+        "caption": "Controllable Parameters"
+      },
+      
+      {
+        "type": "text",
+        "text": "I made a procedural plant growth tool in Blender, with artist-controllable stem growth, leaf placement & density, leaf mesh, noise control, and stem & leaf size controls. Lets you draw to spawn vines along curves and use a 0-1 slider to grow them. The leaf size and placement changes as the vine grows. "
+      },
+
+      {
+        "type": "video",
+        "src": "media/plant-growth/tool-demo.mp4",
+        
+        "caption": "The tool in action."
+      }
+       
+    ],
+
+      
+      "uses": []
+    },
+
+
+
+
+    {
+      "id": "make-space",
+      "name": "Make Space: Blender Python Addon",
+      "category": "tools",
+      
+      "shortDescription": "A workflow tool that makes reorganising complex node graphs faster without manual intervention.",
+      "heroImage": "media/make-space/hero.png",
+      
+      "tools": ["Python", "Blender", "GPU drawing"],
+
+      "process": [
+        {
+          "type": "text",
+          "text": "A workflow tool I built to make reorganising complex node graphs quicker. Ctrl-drag pushes nodes left, right, up, or down, creating room for new nodes without manually selecting and moving sections of the graph."
+        },
+
+        {
+        "type": "video",
+        "src": "media/make-space/make-space-demo.mp4",
+        
+        "caption": "Demo video"
+        },
+
+        {
+          "type": "text",
+          "text": "A scroll-adjustable circle limits the affected area, with every affected node moving equally to preserve spacing. The radius can also be disabled to shift all nodes on one side of the starting point, and the tool remembers that choice between drags."
+        },
+
+        {
+          "type": "text",
+          "text": "Written in Python using Blender’s API, with a GPU-drawn radius overlay, support for nodes inside nested frames, and cancellation that restores the original layout."
+        }
+      
+       
+    ],
+
+     
+      "uses": []
+    },
+
+
+
+
+
+
+    {
+      "id": "isometric",
+      "name": "Isometric Art",
+      "category": "3d-interiors",
+      "shortDescription": "All my isometric art, in one place.",
+      "heroImage": "media/isometric/1.png",
+      "overview": "",
+      "tools": ["Blender", "Shader Nodes", "Geometry Nodes"],
+      "process": "",
+      "gallery": [
+ 
+        "media/isometric/1.png",
+        "media/isometric/2.png",
+        "media/isometric/3.png",
+        "media/isometric/4.png",
+        "media/isometric/5.png",
+        "media/isometric/6.png",
+        "media/isometric/7.png",
+        "media/isometric/8.png",
+        "media/isometric/9.png",
+        "media/isometric/10.png",
+        "media/isometric/11.png",
+        "media/isometric/12.png",
+        "media/isometric/13.png",
+        "media/isometric/14.png",
+        "media/isometric/15.png",
+        "media/isometric/16.png",
+        "media/isometric/17.png",
+        "media/isometric/18.png",
+        "media/isometric/19.png",
+        "media/isometric/20.png",
+        "media/isometric/21.png",
+        "media/isometric/22.png",
+        "media/isometric/23.png",
+        "media/isometric/24.png",
+        "media/isometric/25.png",
+        "media/isometric/26.png",
+        "media/isometric/27.png",
+        "media/isometric/28.png",
+        "media/isometric/29.png",
+        "media/isometric/30.png",
+        "media/isometric/31.png"
+        
+        
+
+      ],
+      "uses": []
+    },
 
 
 
@@ -475,7 +659,7 @@
       "id": "yellow-bedroom",
       "name": "Master Bedroom",
       "category": "3d-interiors",
-      "shortDescription": "",
+      "shortDescription": "Summer colours & light.",
       "heroImage": "media/3dinteriors/yellow-bedroom/persp4.png",
       "overview": "",
       "tools": ["Blender"],
@@ -498,7 +682,7 @@
       "id": "living-blue",
       "name": "Kid's Bedroom",
       "category": "3d-interiors",
-      "shortDescription": "",
+      "shortDescription": "Compact bedroom inspired by Ikea designs.",
       "heroImage": "media/3dinteriors/living-blue/persp2.png",
       "overview": "",
       "tools": ["Blender"],
@@ -537,7 +721,7 @@
       "id": "green-kitchen",
       "name": "Kitchen",
       "category": "3d-interiors",
-      "shortDescription": "",
+      "shortDescription": "Classic farmhouse kitchen.",
       "heroImage": "media/3dinteriors/green-kitchen/persp1.png",
       "overview": "",
       "tools": ["Blender"],
