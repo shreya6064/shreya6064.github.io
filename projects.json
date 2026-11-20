@@ -540,6 +540,67 @@
 
 
 
+
+    {
+      "id": "remove-background",
+      "name": "AI Background Removal & Colour Transfer",
+      "category": "tools",
+      
+      "shortDescription": "A Blender add-on combining deep learning and computer vision to automate alpha mask generation, colour matching, and shader node setup.",
+                                                   
+      "heroImage": "media/remove-background/hero.png",
+      
+      "tools": ["Python", "Blender", "PyTorch"],
+
+      "process": [
+
+        {
+        "type": "image",
+        "src": "media/remove-background/before_reddit.png",
+        
+        "caption": "Before"
+        },
+        {
+        "type": "image",
+        "src": "media/remove-background/after_reddit.png",
+        
+        "caption": "After"
+        },
+        {
+          "type": "text",
+          "text": "The add-on integrates U²-Net, a deep learning model for salient object detection, to generate alpha masks directly within Blender, eliminating the need for external image-editing software. It also implements Reinhard Colour Transfer in LAB colour space using OpenCV, allowing artists to match the colour characteristics of one image to another."
+        },
+
+        {
+        "type": "video",
+        "src": "media/remove-background/bg_removal_demo_video_gh.mp4",
+        
+        "caption": "Demo video"
+        },
+
+        {
+          "type": "text",
+          "text": "Designed to integrate seamlessly into Blender's existing workflow, the add-on provides custom panels in both the Image Editor and Shader Editor. It automatically generates, positions, and connects the necessary texture, Mix, and Color Ramp nodes, reducing repetitive manual shader setup. The add-on also handles Python dependency installation and model weight downloads, simplifying installation and distribution."
+        },
+
+        {
+          "type": "text",
+          "text": "By combining deep learning, computer vision, and Blender's Python API, the tool reduces the time spent on manual masking, colour correction, and material setup, making texture preparation and shader authoring more efficient."
+        }
+      
+       
+    ],
+
+     
+      "uses": []
+    },
+    
+
+
+
+
+
+
     {
       "id": "make-space",
       "name": "Make Space: Blender Python Addon",
@@ -579,7 +640,84 @@
      
       "uses": []
     },
+    
 
+    {
+      "id": "B42D",
+      "name": "Blender for 2D: Python Addon",
+      "category": "tools",
+      
+      "shortDescription": "A Blender add-on that turns a plane into a render-ready 2D canvas.",
+      "heroImage": "media/b42d/hero.png",
+      
+      "tools": ["Python", "Blender"],
+
+      "process": [
+        {
+          "type": "text",
+          "text": "I built B42D to skip the repetitive setup that comes with using Blender for 2D work. Set Up configures a top-down orthographic camera, Eevee, and a transparent render background. Align to Selected centers the camera on the selected plane, fits it in frame, and sets the output resolution."
+        },
+
+      
+        {
+          "type": "text",
+          "text": "If the plane has an image texture, B42D uses the image’s pixel dimensions. For a blank plane, it uses the plane’s proportions and sets the shorter side to 1080 pixels. A square becomes 1080 × 1080, and a 2:1 rectangle becomes 2160 × 1080."
+        }
+        
+
+        
+      
+       
+    ],
+
+     
+      "uses": []
+    },
+
+
+
+
+
+  {
+      "id": "origin-setter",
+      "name": "Origin Setter: Blender Python Addon",
+      "category": "tools",
+      
+      "shortDescription": "A Blender add-on that sets an object’s origin to your Edit Mode selection with one shortcut.",
+      "heroImage": "media/origin-setter/hero.png",
+      
+      "tools": ["Python", "Blender"],
+
+      "process": [
+        {
+          "type": "text",
+          "text": "I built Origin Setter to speed up a small task I kept repeating while modeling. To make a door rotate around its hinge, for example, I can select the vertices along the hinge edge and press Ctrl+W. The origin moves to the selection, the door stays in place, and I can keep editing."
+        },
+
+        {
+        "type": "video",
+        "src": "media/origin-setter/demo-video.mp4",
+        
+        "caption": "Demo video"
+        },
+
+        {
+          "type": "text",
+          "text": "I wrote the add-on in Python using Blender’s bpy API. It uses Blender’s built-in snapping to find the target, briefly switches to Object Mode to set the origin, then restores the 3D cursor and returns to Edit Mode. It supports mesh selections and Bézier, NURBS, and Poly curve points."
+        },
+        {
+          "type" : "text",
+          "text": "Saves you the hassle of select geometry -> shift S -> 3D cursor to geometry -> Tab -> object -> set origin to 3D cursor. You can now select geometry -> Ctrl + W."
+        }
+
+        
+      
+       
+    ],
+
+     
+      "uses": []
+    },
 
 
 
